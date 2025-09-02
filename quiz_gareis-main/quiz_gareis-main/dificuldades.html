@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>SELECIONAR DIFICULDADE - Quiz.exe</title>
+</head>
+<style>
+    body{
+        margin: 0%;
+        font-family: "Press Start 2P", system-ui;
+        background-color: black;
+    }
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .logo{
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 25px;
+        background-color: #0e0e0e;
+    }
+    .logo a{
+        text-decoration: none;
+        color: #00d943;
+        font-size: 40px;
+    }
+    .cardlink {
+        text-decoration: none;
+        display: inline-block;
+    }
+    .tit{
+        background-color: #070707;
+        padding-top: 20px;
+        padding-bottom: 20px; 
+    }
+    .tit h1{
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+    .quadrado{
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        padding-top: 5%;
+    }
+    .quadrado img{
+        width: 500px;
+        height: 500px;
+        border-radius: 15px 15px 0 0;
+    }
+    .card_facil{
+        background-color: #00d943;
+        color: black;
+        text-align: center;
+        border: 4px solid #00d943;
+        outline: 4px solid #00ff90;
+        box-shadow: 0 0 30px rgba(0, 217, 67, 0.5);
+        border-radius: 20px;
+        transition: transform 0.1s;
+        text-shadow: 1px 1px #00ff90;
+    }
+    .card_medio{
+        background-color: #ffcc00;
+        color: black;
+        text-align: center;
+        border: 4px solid #ffcc00;
+        outline: 4px solid #ffee55;
+        box-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+        border-radius: 20px;
+        transition: transform 0.1s;
+        text-shadow: 1px 1px #ffee55;
+    }
+    .card_dificil{
+        background-color: #e53935;
+        color: black;
+        text-align: center;
+        border: 4px solid #e53935;
+        outline: 4px solid #ff6666;
+        box-shadow: 0 0 30px rgba(229, 57, 53, 0.5);
+        border-radius: 20px;
+        transition: transform 0.1s;
+        text-shadow: 1px 1px #ff6666;
+    }
+    .card_facil:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 80px rgba(0, 217, 67, 0.5);
+    }
+    .card_medio:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 80px rgba(255, 204, 0, 0.5);
+    }
+    .card_dificil:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 80px rgba(229, 57, 53, 0.5);
+    }
+
+    .rodape-container {
+        background-color: #070707;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        border-top: 2px solid #00d943;
+    }
+
+    .rodape-conteudo {
+        font-family: 'Press Start 2P', monospace;
+        font-size: 10px;
+        color: #00d943;
+        
+    }
+
+</style>
+<body>
+    <div class="logo">
+        <a href="paginainicial.html">Quiz.exe</a>
+    </div>
+    <div class="tit">
+        <h1>Selecione a Dificuldade das perguntas</h1>
+    </div>
+    <div class="quadrado">
+        <a href="facil.html" class="cardlink">
+            <div class="card_facil">
+                <img src="imagens/facil.png">
+                <h3>Fácil</h3>
+            </div>
+        </a>
+
+        <a href="medio.html" class="cardlink">
+            <div class="card_medio">
+                <img src="imagens/medio.png">
+                <h3>Médio</h3>
+            </div>
+        </a>
+
+        <a href="dificil.html" class="cardlink">
+            <div class="card_dificil">
+                <img src="imagens/dificil.png">
+                <h3>Difícil</h3>
+            </div>
+        </a>  
+    </div>
+
+    <div class="rodape-container">
+        <footer class="rodape-conteudo">
+            © 2025 Quiz.exe Corporation — v1.0.0
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
