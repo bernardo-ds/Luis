@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <title>NÍVEL FÁCIL - Quiz.exe</title>
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: "Press Start 2P", system-ui;
+    background-color: black;
+}
+
+.logo {
+    padding: 30px;
+    background-color: #0e0e0e;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #00d943;
+    font-size: 40px;
+}
+
+.questao {
+    text-align: center;
+    background-color: #070707;
+    padding: 5px 0 20px;
+}
+
+.questao h1 {
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.numero {
+    background-color: #00d943;
+    color: black;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0 auto;
+    width: 60px;
+    border-radius: 30%;
+}
+
+.pergunta {
+    text-align: center;
+    padding: 100px 0 40px;
+}
+
+.pergunta span {
+    color: white;
+    text-shadow: 0 0 7px #ffffff;
+    font-size: 30px;
+}
+
+.alternativas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 70px 40px 0 40px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.alternativa_a, .alternativa_b {
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+    height: 150px;
+}
+
+.alternativa_a {
+    background-color: #00d943;
+    border: 4px solid #00d943;
+    outline: 4px solid #00ff90;
+    box-shadow: 0 0 30px rgba(0, 217, 67, 0.5);
+    text-shadow: 1px 1px #00ff90;
+}
+
+.alternativa_a:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 80px rgba(0, 217, 67, 0.5);
+}
+
+.alternativa_b {
+    background-color: #ffcc00;
+    border: 4px solid #ffcc00;
+    outline: 4px solid #ffee55;
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+    text-shadow: 1px 1px #ffee55;
+}
+
+.alternativa_b:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 80px rgba(255, 204, 0, 0.5);
+}
+
+.rodape-container {
+    background-color: #070707;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-top: 2px solid #00d943;
+}
+
+.rodape-conteudo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #00d943;
+}
+
+#tela-final {
+    display: none;
+    text-align: center;
+    padding: 100px 30px;
+}
+
+#tela-final h2 {
+    color: #00d943;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#tela-final a {
+    background-color: #00d943;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    box-shadow: 0 0 20px rgba(0, 217, 67, 0.5);
+    text-shadow: 1px 1px #00ff90;
+}
+</style>
+<body>
+<div class="logo">
+    <a href="paginainicial.html">Quiz.exe</a>
+</div>
+
+<div class="questao">
+    <h1>Questão</h1>
+    <div class="numero"><span>1</span></div>
+</div>
+
+<div class="pergunta"><span></span></div>
+
+<div class="alternativas-container">
+    <div class="alternativa_a"></div>
+    <div class="alternativa_b"></div>
+</div>
+
+<div id="tela-final">
+    <h2>Você acertou <span id="resultado-final">X</span> de 10 perguntas!</h2>
+    <a href="paginainicial.html">Voltar ao Início</a>
+</div>
+
+<div class="rodape-container">
+    <footer class="rodape-conteudo">
+        © 2025 Quiz.exe Corporation — v1.0.0
+    </footer>
+</div>
+
+<script>
+const perguntas = [
+    {pergunta: "Pichar muro público, é crime?", alternativas:["Sim é crime","Não é crime"], correta:0},
+    {pergunta: "É crime furar a fila em um lugar público?", alternativas:["Sim é crime","Não é crime"], correta:1},
+    {pergunta: "Criar um perfil com foto e nome de outra pessoa para enganar terceiros é crime?", alternativas:["Sim é crime","Não é crime"], correta:0},
+    {pergunta: "É crime invadir a casa de outra pessoa sem permissão?", alternativas:["Sim é crime","Não é crime"], correta:0},
+    {pergunta: "É crime deixar de votar nas eleições, se não for justificado?", alternativas:["Sim é crime","Não é crime"], correta:1},
+    {pergunta: "É crime comer no transporte público?", alternativas:["Sim é crime","Não é crime"], correta:1},
+    {pergunta: "É crime andar de bicicleta na calçada?", alternativas:["Sim é crime","Não é crime"], correta:1},
+    {pergunta: "É crime praticar discriminação racial?", alternativas:["Sim é crime","Não é crime"], correta:0},
+    {pergunta: "Compartilhar fotos íntimas sem consentimento é crime?", alternativas:["Sim é crime","Não é crime"], correta:0},
+    {pergunta: "É crime praticar furtos em estabelecimentos comerciais?", alternativas:["Sim é crime","Não é crime"], correta:0}
+];
+
+let indiceAtual = 0;
+let pontuacao = 0;
+
+const numeroSpan = document.querySelector(".numero span");
+const perguntaSpan = document.querySelector(".pergunta span");
+const alternativasDivs = [
+    document.querySelector(".alternativa_a"),
+    document.querySelector(".alternativa_b")
+];
+
+function carregarQuestao() {
+    const questao = perguntas[indiceAtual];
+    numeroSpan.innerText = indiceAtual + 1;
+    perguntaSpan.innerText = questao.pergunta;
+    alternativasDivs.forEach((el,i) => {
+        el.innerText = questao.alternativas[i];
+        el.style.opacity = "1";
+        el.style.pointerEvents = "auto";
+    });
+}
+
+function bloquearAlternativas() {
+    alternativasDivs.forEach(el => el.style.pointerEvents = "none");
+}
+
+function proximaQuestao() {
+    indiceAtual++;
+    if(indiceAtual < perguntas.length){
+        carregarQuestao();
+    } else {
+        document.querySelector(".logo").style.display = "none";
+        document.querySelector(".questao").style.display = "none";
+        document.querySelector(".pergunta").style.display = "none";
+        document.querySelector(".alternativas-container").style.display = "none";
+        const telaFinal = document.getElementById("tela-final");
+        telaFinal.style.display = "block";
+        document.getElementById("resultado-final").textContent = pontuacao;
+    }
+}
+
+alternativasDivs.forEach((div,index)=>{
+    div.addEventListener("click",()=>{
+        bloquearAlternativas();
+        const correta = perguntas[indiceAtual].correta;
+        if(index === correta) pontuacao++;
+        div.style.opacity = "0.5";
+        setTimeout(proximaQuestao,1000);
+    });
+});
+
+carregarQuestao();
+</script>
+</body>
+</html>

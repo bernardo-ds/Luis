@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>SOBRE - Quiz.exe</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(imagens/sobre.png);
+    }
+
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .quadrado {
+        background-color: black;
+        text-align: center;
+        border-radius: 20px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-left: 15%;
+        margin-right: 15%;
+        border: 4px solid #00d943;
+        outline: 4px solid #00ff90;
+        box-shadow: 0 0 30px rgba(0, 217, 67, 0.5);
+    }   
+
+    h1{
+        color: #00d943;   
+        font-family: "Press Start 2P", system-ui;
+        font-size: 70px;
+    }
+    
+    h2{
+        color: white;
+        font-family: "Press Start 2P", system-ui;
+        font-size: 20px;
+        line-height: 35px;
+        padding-bottom: 40px;
+        padding-top: 30px;
+        font-weight: lighter;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    button{
+        cursor: pointer;
+        font-family: "Press Start 2P", system-ui;
+        font-size: 20px;
+        background: linear-gradient(180deg,rgba(0, 217, 67, 1) 0%, rgba(0, 127, 46, 1) 100%);
+        color: black;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: 8px solid #000;
+        outline: 4px solid white;
+        text-shadow: 1px 1px #00ff66;
+        transition: transform 0.1s;
+        width: 100%;
+    }
+    button:hover{
+        transform: scale(1.05);
+        background: linear-gradient(180deg,rgba(0, 255, 102, 1) 0%, rgba(0, 161, 74, 1) 100%);
+    }
+
+    .rodape-container {
+        background-color: #070707;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        border-top: 2px solid #00d943;
+    }
+
+    .rodape-conteudo {
+        font-family: 'Press Start 2P', monospace;
+        font-size: 10px;
+        color: #00d943;
+        
+    }
+
+</style>
+<body>
+    <div class="quadrado">
+        <h1>Quiz.exe</h1>
+        
+        <h2>Quiz.exe é um jogo interativo sobre crimes cibernéticos.
+            Seu objetivo é testar seu conhecimento sobre ameaças digitais, golpes virtuais, segurança da informação e cultura hacker.
+            Você enfrentará perguntas divididas em três níveis de dificuldade: Fácil, Médio e Difícil.
+            A cada acerto, você avança como um verdadeiro agente de defesa cibernética. Mas cuidado: as armadilhas digitais estão por toda parte!
+            Está preparado para proteger seus dados e derrotar os invasores?</h2>
+        
+        <a href="paginainicial.html"><button>⬅ VOLTAR</button></a>
+    </div>
+
+    <div class="rodape-container">
+        <footer class="rodape-conteudo">
+            © 2025 Quiz.exe Corporation — v1.0.0
+        </footer>
+    </div>
+
+</body>
+
+</html>
