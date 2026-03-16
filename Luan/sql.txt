@@ -1,0 +1,14 @@
+CREATE DATABASE luan;
+
+USE luan;
+
+CREATE TABLE reservas (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome_completo VARCHAR(150) NOT NULL,
+	email VARCHAR(100) not null,
+    passaporte VARCHAR(50) NOT NULL,
+    destino VARCHAR(100) NOT NULL,
+    data_viagem DATE NOT NULL
+)default charset utf8mb4;
+
+select*from reservas;
