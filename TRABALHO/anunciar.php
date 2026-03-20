@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anunciar</title>
+    <link rel="stylesheet" href="anunciar.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.png">
+        <nav>
+            <a href="comprar.php" class="botao meu-botao">Comprar</a>
+            <a href="alugar.php" class="botao meu-botao">Alugar</a>
+            <a href="anunciar.php" class="botao meu-botao">Anuncie seu imóvel</a>
+            <a href="sobre.php" class="botao meu-botao">Sobre</a>
+            <a href="contato.php" class="botao meu-botao">Contato</a>
+            <a href="login.php" class="botao meu-botao conta">Faça login</a>
+            <a href="cadastro.php" class="botao meu-botao conta">Cadastre-se</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Anuncie seu imóvel</h2>
+        <p>Clique no botão abaixo para anunciar sua casa ou apartamento.</p>
+        <button onclick="alert('Aqui a pessoa poderia cadastrar o imóvel')">Colocar meu imóvel</button>
+    </div>
+    <footer>
+        <p>Imobiliária John Leitão</p>
+        <p>Se precisar de ajuda <a href="contato.php">CLIQUE AQUI</a></p>
+    </footer>
+</body>
+
+</html>
