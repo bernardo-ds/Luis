@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #27425c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #1A2B3C;
+    border-bottom: 1px solid #3a5066;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.meu-botao {
+    padding: 10px 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+    background: transparent;
+}
+
+.meu-botao:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.conta {
+    background-color: #9c7e47;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.conta:hover {
+    background-color: #c5a059;
+    transform: translateY(-2px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anuncio-card {
+    background: #1e3347;
+    border: 1px solid #3a5066;
+    border-radius: 16px;
+    padding: 50px 40px;
+    max-width: 680px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito sutil de gradiente no card */
+.anuncio-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(197,160,89,0.08) 0%, transparent 60%);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    margin: 0 0 16px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo {
+    font-size: 1.18rem;
+    color: #c0d4e8;
+    margin: 0 0 40px;
+    line-height: 1.5;
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 30px;
+    margin-bottom: 45px;
+}
+
+.beneficio-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px 15px;
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    transition: all 0.3s ease;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-5px);
+    border-color: #c5a059;
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.12);
+}
+
+.icone {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 12px;
+    color: #c5a059;
+}
+
+.beneficio-item p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #e0eafc;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: #c5a059;
+    color: white;
+    padding: 16px 48px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.3);
+    margin: 20px 0 30px;
+}
+
+.btn-principal:hover {
+    background: #d4b376;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(197, 160, 89, 0.45);
+}
+
+.ajuda {
+    font-size: 1rem;
+    color: #a0c0e0;
+}
+
+.ajuda a {
+    color: #c5a059;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ajuda a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #1A2B3C;
+    color: #c0d4e8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: auto;
+    border-top: 1px solid #3a5066;
+}
+
+footer a {
+    color: #c5a059;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+    
+    .anuncio-card {
+        padding: 40px 25px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
