@@ -2,16 +2,16 @@
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background:#ffffff;
-
+    background:#27425c;
     display:flex;
     flex-direction:column;
     min-height:100vh;
+    
 }
 
 header{
-    background:#f8f8f8;
-    border-bottom:1px solid #ddd;
+    background:#1A2B3C;
+    border-bottom:1px solid #ddd;   
     padding:12px 40px;
     display:flex;
     align-items:center;
@@ -25,13 +25,17 @@ header img{
 nav a{
     margin-left:20px;
     text-decoration:none;
-    color:#333;
+    color:#ffffff;
     font-weight:bold;
+}
+
+nav a:hover{
+    color:#2f80ed;
 }
 
 .hero{
     height:420px;
-    background:url("img/casa1.jpg");
+    background:url("img/img\ 5.jpg");
     background-size:cover;
     background-position:center;
     display:flex;
@@ -42,7 +46,7 @@ nav a{
 .search{
     background:white;
     padding:15px;
-    border-radius:8px;
+    border-radius:4px;
     box-shadow:0 2px 6px rgba(0,0,0,0.15);
 }
 
@@ -65,9 +69,9 @@ nav a{
 }
 
 .card{
-    background:white;
+    background:rgb(225, 225, 225);
     width:300px;
-    border-radius:6px;
+    border-radius:8px;
     overflow:hidden;
     box-shadow:0 0 6px rgba(0,0,0,0.1);
 }
@@ -84,23 +88,34 @@ nav a{
 
 button{
     padding:10px 16px;
-    background:#2f80ed;
+    background:#C5A059;
     color:white;
     border:none;
     border-radius:4px;
     cursor:pointer;
 }
 
-footer{
-    background:#b4b4b4;
-    color:#000000;
-    text-align:center;
-    padding:15px;
+footer {
+    background: #1A2B3C;
+    color: #c0d4e8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: auto;
+    border-top: 1px solid #3a5066;
 }
 
+footer a {
+    color: #c5a059;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    
 .meu-botao {
   padding: 10px 10px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s ease; 
@@ -110,7 +125,50 @@ footer{
 .meu-botao:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 .conta{
-    background-color: #2f80ed;
+    background-color: #9c7e47;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+}
+
+h2{
+    color: white;
+}
+
+.botao-comprar {
+    /* Faz o link aceitar altura e largura (essencial para parecer botão) */
+    display: inline-block; 
+    
+    /* Cores e Fundo (usei o tom dourado do seu projeto) */
+    background-color: #C5A059; 
+    color: white;
+    
+    /* Remove o sublinhado padrão de links */
+    text-decoration: none; 
+    
+    /* Espaçamento interno (o tamanho da caixinha) */
+    padding: 10px 20px;
+    
+    /* Arredondamento das bordas */
+    border-radius: 4px;
+    
+    /* Estilo da fonte */
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    
+    /* Margem para não colar no texto acima */
+    margin-top: 10px;
+    
+    /* Transição suave para o efeito de passar o mouse */
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito quando passa o mouse por cima */
+.botao-comprar:hover {
+    background-color: #a88746; /* Um dourado um pouco mais escuro */
     color: white;
 }

@@ -1,8 +1,7 @@
-
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background:#ffffff;
+    background:#27425c;
 
     display:flex;
     flex-direction:column;
@@ -10,7 +9,7 @@ body{
 }
 
 header{
-    background:#f8f8f8;
+    background:#1A2B3C;
     border-bottom:1px solid #ddd;
     padding:12px 40px;
     display:flex;
@@ -25,91 +24,107 @@ header img{
 nav a{
     margin-left:20px;
     text-decoration:none;
-    color:#333;
+    color:#ffffff;
     font-weight:bold;
 }
 
-.hero{
-    height:420px;
-    background:url("img/casa1.jpg");
-    background-size:cover;
-    background-position:center;
+nav a:hover{
+    color:#2f80ed;
+}
+
+p{
+    color:white;
+    text-align:center;
+}
+
+/* CAIXA CENTRAL */
+.caixa-login {
+    background-color: #1A2B3C;
+    color: #ddd;
+    width: 500px;
+    margin: 30px auto;
+    padding: 18px; /* menor */
+    border-radius: 12px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
+
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
 }
 
-.search{
-    background:white;
-    padding:15px;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.15);
-}
-
-.search input{
-    padding:8px;
-    margin-right:10px;
-}
-
-.container{
-    width:90%;
-    margin:auto;
-    margin-top:30px;
-    flex:1;
-}
-
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    gap:25px;
-}
-
-.card{
-    background:white;
-    width:300px;
-    border-radius:6px;
-    overflow:hidden;
-    box-shadow:0 0 6px rgba(0,0,0,0.1);
-}
-
-.card img{
+/* LABELS MAIS PRÓXIMOS */
+.caixa-login label{
     width:100%;
-    height:180px;
-    object-fit:cover;
+    max-width:320px;
+    text-align:left;
+    margin-top:4px; /* menor espaço */
+    margin-bottom:3px;
 }
 
-.info{
-    padding:12px;
+/* INPUTS MAIS JUNTOS */
+.caixa-login input,
+.caixa-login textarea{
+    width:100%;
+    max-width:320px;
+    padding:10px;
+    border-radius:6px;
+    border:none;
 }
 
-button{
-    padding:10px 16px;
-    background:#2f80ed;
+/* TEXTAREA MENOR */
+.caixa-login textarea{
+    height:90px;
+    resize:none;
+}
+
+/* BOTÃO */
+.caixa-login button{
+    width:100%;
+    max-width:320px;
+    padding:15px;
+    background:#C5A059;
     color:white;
     border:none;
-    border-radius:4px;
+    border-radius:6px;
     cursor:pointer;
+    font-weight:bold;
 }
 
-footer{
-    background:#b4b4b4;
-    color:#000000;
-    text-align:center;
-    padding:15px;
+.caixa-login button:hover{
+    background:#a88746;
 }
+
+h2{
+    color:white;
+    margin-bottom:8px; /* menor */
+    text-align:center;
+}
+
+footer {
+    background: #1A2B3C;
+    color: #c0d4e8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: auto;
+    border-top: 1px solid #3a5066;
+}
+
 .meu-botao {
   padding: 10px 10px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s ease; 
-  border-radius: 10px 10px 10px;
+  border-radius: 10px;
 }
 
 .meu-botao:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 .conta{
-    background-color: #2f80ed;
+    background-color: #9c7e47;
     color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
