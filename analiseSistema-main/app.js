@@ -12,7 +12,7 @@ function saveTasks() {
 function render() {
     const list = document.getElementById('task-list');
     if (!list) return;
-    
+
     list.innerHTML = '';
 
     tasks.forEach(task => {
@@ -20,11 +20,13 @@ function render() {
         if (task.done) li.classList.add('done');
 
         li.innerHTML = `
-            <span>${task.text}</span>
-            <div>
-                <button class="toggle">✓</button>
-                <button class="delete">✕</button>
-            </div>
+           <span>${task.text}</span>
+        <div>
+            <button class="toggle" style="background-color: #4CAF50; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer;">✓
+            </button>
+            <button class="delete" style="background-color: #f44336; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer;">✕
+            </button>
+        </div>
         `;
 
         li.querySelector('.toggle').addEventListener('click', () => {
@@ -66,7 +68,7 @@ function addTask() {
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
     loadTasks();
-    
+
     const addBtn = document.getElementById('add-btn');
     if (addBtn) addBtn.addEventListener('click', addTask);
 
